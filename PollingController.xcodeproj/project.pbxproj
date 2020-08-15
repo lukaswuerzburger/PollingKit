@@ -62,6 +62,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2162BEE224E7F9B200BEE369 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				21892AE624E521A600630677 /* PollingController.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		21892AC024E5209000630677 = {
 			isa = PBXGroup;
 			children = (
@@ -86,7 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				21892AE424E520BC00630677 /* Supporting Files */,
-				21892AE624E521A600630677 /* PollingController.swift */,
+				2162BEE224E7F9B200BEE369 /* Sources */,
 			);
 			path = PollingController;
 			sourceTree = "<group>";
