@@ -11,24 +11,91 @@ import XCTest
 
 class PollingControllerTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testTakesArguments() {
+        let polling = PollingController(interval: 4) { _ in }
+        XCTAssertEqual(polling.interval, 4)
+        XCTAssertNotNil(polling.handler)
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func testIsRunningRepresentsBehavior() {
+        let polling = PollingController() { _ in }
+        XCTAssert(polling.state == .idle)
+        polling.start()
+        XCTAssertTrue(polling.isRunning)
+        polling.stop()
+        XCTAssertFalse(polling.isRunning)
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testIsCallingCallbackAtLeastSevenTimes() {
+        let expect = expectation(description: "polling to be called seven times")
+        expect.expectedFulfillmentCount = 7
+        var polling: PollingController!
+        polling = PollingController(interval: 0.1) { callback in
+            callback()
+            expect.fulfill()
         }
+        polling.start()
+        wait(for: [expect], timeout: 1)
     }
 
+    func testBelatedCallbackContinuesPolling() {
+        let expectStoppedTimer = expectation(description: "expect stopped timer")
+        let expectRestartedTimerAfterCallback = expectation(description: "expect restarted timer after callback")
+        expectRestartedTimerAfterCallback.expectedFulfillmentCount = 2
+        var count = 0
+        var polling: PollingController!
+        polling = PollingController(interval: 0.1) { callback in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                count += 1
+                callback()
+                if count == 1 {
+                    XCTAssertTrue(polling.isRunning)
+                    XCTAssertEqual(polling.state, .waitingWithActiveTimerForHandlerCallingBack)
+                    XCTAssertNotNil(polling.timer)
+                    polling.stop()
+                } else if count == 2 {
+                    XCTAssertFalse(polling.isRunning)
+                    XCTAssertEqual(polling.state, .idle)
+                    XCTAssertNil(polling.timer)
+                }
+                expectRestartedTimerAfterCallback.fulfill()
+            }
+        }
+        XCTAssertEqual(polling.state, .idle)
+        polling.start()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            XCTAssertNil(polling.timer)
+            XCTAssertTrue(polling.isRunning)
+            XCTAssertEqual(polling.state, .waitingWithInactiveTimerForHandlerCallingBack)
+            expectStoppedTimer.fulfill()
+        }
+        XCTAssertTrue(polling.isRunning)
+        XCTAssertEqual(polling.state, .waitingWithActiveTimerForHandlerCallingBack)
+        wait(for: [expectStoppedTimer, expectRestartedTimerAfterCallback], timeout: 1)
+    }
+
+    func testCanNotStartPollingWithActiveTimer() {
+        let polling = PollingController(interval: 4) { _ in }
+        polling.start()
+        let timer = polling.timer
+        polling.start()
+        XCTAssertEqual(timer, polling.timer)
+    }
+
+    func testReactivatesTimerAfterBelatedCallback() {
+        let polling = PollingController(interval: 0.02) { callback in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.04) {
+                callback()
+            }
+        }
+        polling.start()
+        let timer = polling.timer
+        let expectTimerToInvalidateAndReassign = expectation(description: "timer to invalidate and reassign")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+            XCTAssertNotEqual(timer, polling.timer)
+            XCTAssertNotNil(polling.timer)
+            expectTimerToInvalidateAndReassign.fulfill()
+        }
+        wait(for: [expectTimerToInvalidateAndReassign], timeout: 1)
+    }
 }

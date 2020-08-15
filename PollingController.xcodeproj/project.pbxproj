@@ -10,6 +10,7 @@
 		21892AD424E5209000630677 /* PollingController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21892ACA24E5209000630677 /* PollingController.framework */; };
 		21892AD924E5209000630677 /* PollingControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21892AD824E5209000630677 /* PollingControllerTests.swift */; };
 		21892ADB24E5209000630677 /* PollingController.h in Headers */ = {isa = PBXBuildFile; fileRef = 21892ACD24E5209000630677 /* PollingController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21892AE724E521A600630677 /* PollingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21892AE624E521A600630677 /* PollingController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		21892AD324E5209000630677 /* PollingControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PollingControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21892AD824E5209000630677 /* PollingControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollingControllerTests.swift; sourceTree = "<group>"; };
 		21892ADA24E5209000630677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21892AE624E521A600630677 /* PollingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +73,8 @@
 		21892ACC24E5209000630677 /* PollingController */ = {
 			isa = PBXGroup;
 			children = (
-				21892ACD24E5209000630677 /* PollingController.h */,
-				21892ACE24E5209000630677 /* Info.plist */,
+				21892AE424E520BC00630677 /* Supporting Files */,
+				21892AE624E521A600630677 /* PollingController.swift */,
 			);
 			path = PollingController;
 			sourceTree = "<group>";
@@ -80,10 +82,27 @@
 		21892AD724E5209000630677 /* PollingControllerTests */ = {
 			isa = PBXGroup;
 			children = (
+				21892AE524E520C300630677 /* Supporting Files */,
 				21892AD824E5209000630677 /* PollingControllerTests.swift */,
-				21892ADA24E5209000630677 /* Info.plist */,
 			);
 			path = PollingControllerTests;
+			sourceTree = "<group>";
+		};
+		21892AE424E520BC00630677 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				21892ACD24E5209000630677 /* PollingController.h */,
+				21892ACE24E5209000630677 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		21892AE524E520C300630677 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				21892ADA24E5209000630677 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +167,7 @@
 				TargetAttributes = {
 					21892AC924E5209000630677 = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 					};
 					21892AD224E5209000630677 = {
 						CreatedOnToolsVersion = 11.6;
@@ -195,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21892AE724E521A600630677 /* PollingController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +289,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -325,7 +346,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -340,13 +361,14 @@
 		21892ADF24E5209000630677 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = UE4U5XA7R9;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = PollingController/Info.plist;
+				INFOPLIST_FILE = "PollingController/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -356,6 +378,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.lukaswuerzburger.PollingController;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,13 +387,14 @@
 		21892AE024E5209000630677 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = UE4U5XA7R9;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = PollingController/Info.plist;
+				INFOPLIST_FILE = "PollingController/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -388,9 +412,10 @@
 		21892AE224E5209000630677 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UE4U5XA7R9;
-				INFOPLIST_FILE = PollingControllerTests/Info.plist;
+				INFOPLIST_FILE = "PollingControllerTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -406,9 +431,10 @@
 		21892AE324E5209000630677 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UE4U5XA7R9;
-				INFOPLIST_FILE = PollingControllerTests/Info.plist;
+				INFOPLIST_FILE = "PollingControllerTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
