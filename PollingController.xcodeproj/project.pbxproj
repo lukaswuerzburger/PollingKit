@@ -11,6 +11,8 @@
 		21892AD924E5209000630677 /* PollingControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21892AD824E5209000630677 /* PollingControllerTests.swift */; };
 		21892ADB24E5209000630677 /* PollingController.h in Headers */ = {isa = PBXBuildFile; fileRef = 21892ACD24E5209000630677 /* PollingController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21892AE724E521A600630677 /* PollingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21892AE624E521A600630677 /* PollingController.swift */; };
+		B6EC14F9B75B82597608DB2F /* Pods_PollingController_PollingControllerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E8F674FF5DE3EA8C5031354 /* Pods_PollingController_PollingControllerTests.framework */; };
+		E65C2F093E38031967DA2619 /* Pods_PollingController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8940BD2BCE914C9469309BD /* Pods_PollingController.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +33,12 @@
 		21892AD824E5209000630677 /* PollingControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollingControllerTests.swift; sourceTree = "<group>"; };
 		21892ADA24E5209000630677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21892AE624E521A600630677 /* PollingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollingController.swift; sourceTree = "<group>"; };
+		619A5ED99EC2CD54692AC511 /* Pods-PollingController-PollingControllerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingController-PollingControllerTests.debug.xcconfig"; path = "Target Support Files/Pods-PollingController-PollingControllerTests/Pods-PollingController-PollingControllerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		71B190AB05E9F812AAD6C1FE /* Pods-PollingController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingController.debug.xcconfig"; path = "Target Support Files/Pods-PollingController/Pods-PollingController.debug.xcconfig"; sourceTree = "<group>"; };
+		91187777334BC59C6672FAEF /* Pods-PollingController-PollingControllerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingController-PollingControllerTests.release.xcconfig"; path = "Target Support Files/Pods-PollingController-PollingControllerTests/Pods-PollingController-PollingControllerTests.release.xcconfig"; sourceTree = "<group>"; };
+		9E8F674FF5DE3EA8C5031354 /* Pods_PollingController_PollingControllerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PollingController_PollingControllerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8940BD2BCE914C9469309BD /* Pods_PollingController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PollingController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB8B715D59F190101EEB1B62 /* Pods-PollingController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingController.release.xcconfig"; path = "Target Support Files/Pods-PollingController/Pods-PollingController.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E65C2F093E38031967DA2619 /* Pods_PollingController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +55,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21892AD424E5209000630677 /* PollingController.framework in Frameworks */,
+				B6EC14F9B75B82597608DB2F /* Pods_PollingController_PollingControllerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +68,8 @@
 				21892ACC24E5209000630677 /* PollingController */,
 				21892AD724E5209000630677 /* PollingControllerTests */,
 				21892ACB24E5209000630677 /* Products */,
+				82F4FFDEA844FD24DF956103 /* Pods */,
+				A91C4317CCA22882BF506148 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +117,26 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		82F4FFDEA844FD24DF956103 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				71B190AB05E9F812AAD6C1FE /* Pods-PollingController.debug.xcconfig */,
+				FB8B715D59F190101EEB1B62 /* Pods-PollingController.release.xcconfig */,
+				619A5ED99EC2CD54692AC511 /* Pods-PollingController-PollingControllerTests.debug.xcconfig */,
+				91187777334BC59C6672FAEF /* Pods-PollingController-PollingControllerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A91C4317CCA22882BF506148 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8940BD2BCE914C9469309BD /* Pods_PollingController.framework */,
+				9E8F674FF5DE3EA8C5031354 /* Pods_PollingController_PollingControllerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -123,10 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21892ADE24E5209000630677 /* Build configuration list for PBXNativeTarget "PollingController" */;
 			buildPhases = (
+				595C142B1DAABAA041CD192E /* [CP] Check Pods Manifest.lock */,
 				21892AC524E5209000630677 /* Headers */,
 				21892AC624E5209000630677 /* Sources */,
 				21892AC724E5209000630677 /* Frameworks */,
 				21892AC824E5209000630677 /* Resources */,
+				2162BEE124E7E31C00BEE369 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -141,6 +175,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21892AE124E5209000630677 /* Build configuration list for PBXNativeTarget "PollingControllerTests" */;
 			buildPhases = (
+				7F29007507C7E1A01901CCA1 /* [CP] Check Pods Manifest.lock */,
 				21892ACF24E5209000630677 /* Sources */,
 				21892AD024E5209000630677 /* Frameworks */,
 				21892AD124E5209000630677 /* Resources */,
@@ -209,6 +244,71 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2162BEE124E7E31C00BEE369 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		595C142B1DAABAA041CD192E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PollingController-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F29007507C7E1A01901CCA1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PollingController-PollingControllerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		21892AC624E5209000630677 /* Sources */ = {
@@ -360,6 +460,7 @@
 		};
 		21892ADF24E5209000630677 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71B190AB05E9F812AAD6C1FE /* Pods-PollingController.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -386,6 +487,7 @@
 		};
 		21892AE024E5209000630677 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB8B715D59F190101EEB1B62 /* Pods-PollingController.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -411,6 +513,7 @@
 		};
 		21892AE224E5209000630677 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 619A5ED99EC2CD54692AC511 /* Pods-PollingController-PollingControllerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -430,6 +533,7 @@
 		};
 		21892AE324E5209000630677 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91187777334BC59C6672FAEF /* Pods-PollingController-PollingControllerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
