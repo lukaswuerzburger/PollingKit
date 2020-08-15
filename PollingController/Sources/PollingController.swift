@@ -8,6 +8,10 @@
 
 import Foundation
 
+public protocol PollingControllerDelegate: class {
+    func pollingController(_ pollingController: PollingController, didChangeState state: PollingController.State)
+}
+
 public class PollingController {
 
     // MARK: - Variables
@@ -15,22 +19,30 @@ public class PollingController {
     var timer: Timer?
     var lastTimerTicked: Date?
     var handler: (@escaping () -> Void) -> Void
-    var state: State = .idle
+
+    /// A delegate object to communicate state changes to.
+    public weak var delegate: PollingControllerDelegate?
+
+    /// The current state of the mechanics, covering waiting for callbacks and timer state.
+    public private(set) var state: State = .idle {
+        didSet { delegate?.pollingController(self, didChangeState: state) }
+    }
 
     /// The preferred interval for the timer to invoke the handler. Due to possible belated
     /// callback of the handler, which is controlled by the user, it cannot be ensured that
     /// the timer ticks according to the interval.
-    public var preferredInterval: TimeInterval
+    public private(set) var preferredInterval: TimeInterval
 
-    /// Indicates wether the polling is running.
+    /// Indicates wether the polling is running. Use `state` for a more detailed state.
     public var isRunning: Bool {
-        state.isRunning
+        return state.isRunning
     }
 
     // MARK: - Initializer
 
     /**
-     * Initializes the polling with a preferred interval for timing the invocation of the handler.
+     * Initializes the polling with a preferred interval for timing the periodical
+     * invocation of the handler.
      *
      * - Parameter preferredInterval: The interval for invoking the handler
      *
@@ -44,7 +56,8 @@ public class PollingController {
     // MARK: - Engine
 
     /**
-     * Invokes the handler and starts a timer with the interval provided by the `interval` property.
+     * Invokes the handler and starts a timer with the interval provided by the `interval`
+     * property.
      */
     public func start() {
         startTimerIfNecessary()
@@ -84,7 +97,7 @@ public class PollingController {
     }
 
     func updateStateAfterTimerHasStopped() {
-        if state.isWaitingForHandlerToCallBack {
+        if state == .runningWithTimer {
             state = .runningWithoutTimer
         }
     }
@@ -97,11 +110,13 @@ public class PollingController {
     }
 
     func handleHandlerDidCallBack() {
-        guard state != .idle else { return }
-        if state == .runningWithoutTimer {
-            start()
-        } else {
+        switch state {
+        case .runningWithTimer:
             state = .waitingForTimerTick
+        case .runningWithoutTimer:
+            start()
+        default:
+            break
         }
     }
 }
@@ -110,7 +125,7 @@ public class PollingController {
 
 extension PollingController {
 
-    enum State {
+    public enum State {
 
         /// Polling has not been started or it has been stopped.
         case idle
@@ -118,7 +133,8 @@ extension PollingController {
         /// Waiting for the handler to invoke the callback.
         case runningWithTimer
 
-        /// Waiting for the handler to invoke the callback and the timer has exeeded its interval time.
+        /// Waiting for the handler to invoke the callback and the timer has exeeded its
+        /// interval time.
         case runningWithoutTimer
 
         /// Handler did invoke the callback and still waiting for the timer to tick.
@@ -137,12 +153,5 @@ extension PollingController.State {
 
     var isRunning: Bool {
         return self != .idle
-    }
-
-    var isWaitingForHandlerToCallBack: Bool {
-        return [
-            .runningWithTimer,
-            .runningWithoutTimer
-        ].contains(self)
     }
 }

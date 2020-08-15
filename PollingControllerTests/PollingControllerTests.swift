@@ -98,4 +98,61 @@ class PollingControllerTests: XCTestCase {
         }
         wait(for: [expectTimerToInvalidateAndReassign], timeout: 1)
     }
+
+    func testCallsDelegateCapturesCorrectStateChangesWithHappyPath() {
+        let polling = PollingController { callback in
+            callback()
+        }
+        let delegate = PollingControllerDelegateMock()
+        polling.delegate = delegate
+        XCTAssertEqual([], delegate.stateChangeHistory)
+        polling.start()
+        XCTAssertEqual([
+            .waitingForTimerTick,
+            .runningWithTimer,
+            .waitingForTimerTick
+        ], delegate.stateChangeHistory)
+    }
+
+    func testCallsDelegateCapturesCorrectStateChangesWithSadPath() {
+        let polling = PollingController(preferredInterval: 0.02) { callback in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.04) {
+                callback()
+            }
+        }
+        let delegate = PollingControllerDelegateMock()
+        polling.delegate = delegate
+        XCTAssertEqual([], delegate.stateChangeHistory)
+        polling.start()
+
+        let expectCallbackToBeInvoked = expectation(description: "callback to be invoked")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+            polling.stop()
+            XCTAssertEqual([
+                .waitingForTimerTick,
+                .runningWithTimer,
+                .runningWithoutTimer,
+                .waitingForTimerTick,
+                .runningWithTimer,
+                .idle
+            ], delegate.stateChangeHistory)
+            expectCallbackToBeInvoked.fulfill()
+        }
+        wait(for: [expectCallbackToBeInvoked], timeout: 1)
+    }
+}
+
+// MARK: - Mocked Objects
+
+class PollingControllerDelegateMock: PollingControllerDelegate {
+
+    // MARK: - Variables
+
+    var stateChangeHistory: [PollingController.State] = []
+
+    // MARK: - Polling Controller Delegate
+
+    func pollingController(_ pollingController: PollingController, didChangeState state: PollingController.State) {
+        stateChangeHistory.append(state)
+    }
 }

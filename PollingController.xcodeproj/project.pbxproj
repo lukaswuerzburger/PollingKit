@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2162BEEA24E7FA4500BEE369 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2162BEE924E7FA4500BEE369 /* AppDelegate.swift */; };
+		2162BEEE24E7FA4500BEE369 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2162BEED24E7FA4500BEE369 /* ViewController.swift */; };
+		2162BEF124E7FA4500BEE369 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2162BEEF24E7FA4500BEE369 /* Main.storyboard */; };
+		2162BEF324E7FA4700BEE369 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2162BEF224E7FA4700BEE369 /* Assets.xcassets */; };
+		2162BEF624E7FA4700BEE369 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2162BEF424E7FA4700BEE369 /* LaunchScreen.storyboard */; };
+		2162BEFC24E8020C00BEE369 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2162BEFB24E8020C00BEE369 /* GraphView.swift */; };
+		2162BEFD24E80D8400BEE369 /* PollingController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21892ACA24E5209000630677 /* PollingController.framework */; };
+		2162BEFE24E80D8400BEE369 /* PollingController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21892ACA24E5209000630677 /* PollingController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		21892AD424E5209000630677 /* PollingController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21892ACA24E5209000630677 /* PollingController.framework */; };
 		21892AD924E5209000630677 /* PollingControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21892AD824E5209000630677 /* PollingControllerTests.swift */; };
 		21892ADB24E5209000630677 /* PollingController.h in Headers */ = {isa = PBXBuildFile; fileRef = 21892ACD24E5209000630677 /* PollingController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -16,6 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2162BEFF24E80D8400BEE369 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21892AC124E5209000630677 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21892AC924E5209000630677;
+			remoteInfo = PollingController;
+		};
 		21892AD524E5209000630677 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 21892AC124E5209000630677 /* Project object */;
@@ -25,7 +40,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2162BF0124E80D8400BEE369 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2162BEFE24E80D8400BEE369 /* PollingController.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2162BEE724E7FA4500BEE369 /* PollingControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PollingControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2162BEE924E7FA4500BEE369 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2162BEED24E7FA4500BEE369 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2162BEF024E7FA4500BEE369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2162BEF224E7FA4700BEE369 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2162BEF524E7FA4700BEE369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2162BEF724E7FA4700BEE369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2162BEFB24E8020C00BEE369 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		21892ACA24E5209000630677 /* PollingController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PollingController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21892ACD24E5209000630677 /* PollingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PollingController.h; sourceTree = "<group>"; };
 		21892ACE24E5209000630677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,6 +79,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2162BEE424E7FA4500BEE369 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2162BEFD24E80D8400BEE369 /* PollingController.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21892AC724E5209000630677 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -70,11 +115,26 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
+		2162BEE824E7FA4500BEE369 /* PollingControllerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				2162BEE924E7FA4500BEE369 /* AppDelegate.swift */,
+				2162BEED24E7FA4500BEE369 /* ViewController.swift */,
+				2162BEFB24E8020C00BEE369 /* GraphView.swift */,
+				2162BEEF24E7FA4500BEE369 /* Main.storyboard */,
+				2162BEF224E7FA4700BEE369 /* Assets.xcassets */,
+				2162BEF424E7FA4700BEE369 /* LaunchScreen.storyboard */,
+				2162BEF724E7FA4700BEE369 /* Info.plist */,
+			);
+			path = PollingControllerDemo;
+			sourceTree = "<group>";
+		};
 		21892AC024E5209000630677 = {
 			isa = PBXGroup;
 			children = (
 				21892ACC24E5209000630677 /* PollingController */,
 				21892AD724E5209000630677 /* PollingControllerTests */,
+				2162BEE824E7FA4500BEE369 /* PollingControllerDemo */,
 				21892ACB24E5209000630677 /* Products */,
 				82F4FFDEA844FD24DF956103 /* Pods */,
 				A91C4317CCA22882BF506148 /* Frameworks */,
@@ -86,6 +146,7 @@
 			children = (
 				21892ACA24E5209000630677 /* PollingController.framework */,
 				21892AD324E5209000630677 /* PollingControllerTests.xctest */,
+				2162BEE724E7FA4500BEE369 /* PollingControllerDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,6 +220,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		2162BEE624E7FA4500BEE369 /* PollingControllerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2162BEFA24E7FA4700BEE369 /* Build configuration list for PBXNativeTarget "PollingControllerDemo" */;
+			buildPhases = (
+				2162BEE324E7FA4500BEE369 /* Sources */,
+				2162BEE424E7FA4500BEE369 /* Frameworks */,
+				2162BEE524E7FA4500BEE369 /* Resources */,
+				2162BF0124E80D8400BEE369 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2162BF0024E80D8400BEE369 /* PBXTargetDependency */,
+			);
+			name = PollingControllerDemo;
+			productName = PollingControllerDemo;
+			productReference = 2162BEE724E7FA4500BEE369 /* PollingControllerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 		21892AC924E5209000630677 /* PollingController */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21892ADE24E5209000630677 /* Build configuration list for PBXNativeTarget "PollingController" */;
@@ -208,6 +288,9 @@
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = "Lukas Würzburger";
 				TargetAttributes = {
+					2162BEE624E7FA4500BEE369 = {
+						CreatedOnToolsVersion = 11.6;
+					};
 					21892AC924E5209000630677 = {
 						CreatedOnToolsVersion = 11.6;
 						LastSwiftMigration = 1160;
@@ -232,11 +315,22 @@
 			targets = (
 				21892AC924E5209000630677 /* PollingController */,
 				21892AD224E5209000630677 /* PollingControllerTests */,
+				2162BEE624E7FA4500BEE369 /* PollingControllerDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2162BEE524E7FA4500BEE369 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2162BEF624E7FA4700BEE369 /* LaunchScreen.storyboard in Resources */,
+				2162BEF324E7FA4700BEE369 /* Assets.xcassets in Resources */,
+				2162BEF124E7FA4500BEE369 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21892AC824E5209000630677 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -319,6 +413,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2162BEE324E7FA4500BEE369 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2162BEEE24E7FA4500BEE369 /* ViewController.swift in Sources */,
+				2162BEEA24E7FA4500BEE369 /* AppDelegate.swift in Sources */,
+				2162BEFC24E8020C00BEE369 /* GraphView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21892AC624E5209000630677 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -338,6 +442,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2162BF0024E80D8400BEE369 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21892AC924E5209000630677 /* PollingController */;
+			targetProxy = 2162BEFF24E80D8400BEE369 /* PBXContainerItemProxy */;
+		};
 		21892AD624E5209000630677 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 21892AC924E5209000630677 /* PollingController */;
@@ -345,7 +454,62 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		2162BEEF24E7FA4500BEE369 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2162BEF024E7FA4500BEE369 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2162BEF424E7FA4700BEE369 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2162BEF524E7FA4700BEE369 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		2162BEF824E7FA4700BEE369 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PollingControllerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.lukaswuerzburger.PollingControllerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2162BEF924E7FA4700BEE369 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PollingControllerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.lukaswuerzburger.PollingControllerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		21892ADC24E5209000630677 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -562,6 +726,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2162BEFA24E7FA4700BEE369 /* Build configuration list for PBXNativeTarget "PollingControllerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2162BEF824E7FA4700BEE369 /* Debug */,
+				2162BEF924E7FA4700BEE369 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		21892AC424E5209000630677 /* Build configuration list for PBXProject "PollingController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
