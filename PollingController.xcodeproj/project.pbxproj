@@ -7,13 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2162BEEA24E7FA4500BEE369 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2162BEE924E7FA4500BEE369 /* AppDelegate.swift */; };
+		2162BEEE24E7FA4500BEE369 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2162BEED24E7FA4500BEE369 /* ViewController.swift */; };
+		2162BEF124E7FA4500BEE369 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2162BEEF24E7FA4500BEE369 /* Main.storyboard */; };
+		2162BEF324E7FA4700BEE369 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2162BEF224E7FA4700BEE369 /* Assets.xcassets */; };
+		2162BEF624E7FA4700BEE369 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2162BEF424E7FA4700BEE369 /* LaunchScreen.storyboard */; };
+		2162BEFC24E8020C00BEE369 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2162BEFB24E8020C00BEE369 /* GraphView.swift */; };
+		2162BEFD24E80D8400BEE369 /* PollingController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21892ACA24E5209000630677 /* PollingController.framework */; };
+		2162BEFE24E80D8400BEE369 /* PollingController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21892ACA24E5209000630677 /* PollingController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		21892AD424E5209000630677 /* PollingController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21892ACA24E5209000630677 /* PollingController.framework */; };
 		21892AD924E5209000630677 /* PollingControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21892AD824E5209000630677 /* PollingControllerTests.swift */; };
 		21892ADB24E5209000630677 /* PollingController.h in Headers */ = {isa = PBXBuildFile; fileRef = 21892ACD24E5209000630677 /* PollingController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21892AE724E521A600630677 /* PollingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21892AE624E521A600630677 /* PollingController.swift */; };
+		B6EC14F9B75B82597608DB2F /* Pods_PollingController_PollingControllerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E8F674FF5DE3EA8C5031354 /* Pods_PollingController_PollingControllerTests.framework */; };
+		E65C2F093E38031967DA2619 /* Pods_PollingController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8940BD2BCE914C9469309BD /* Pods_PollingController.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2162BEFF24E80D8400BEE369 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21892AC124E5209000630677 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21892AC924E5209000630677;
+			remoteInfo = PollingController;
+		};
 		21892AD524E5209000630677 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 21892AC124E5209000630677 /* Project object */;
@@ -23,7 +40,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2162BF0124E80D8400BEE369 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2162BEFE24E80D8400BEE369 /* PollingController.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2162BEE724E7FA4500BEE369 /* PollingControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PollingControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2162BEE924E7FA4500BEE369 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2162BEED24E7FA4500BEE369 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2162BEF024E7FA4500BEE369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2162BEF224E7FA4700BEE369 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2162BEF524E7FA4700BEE369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2162BEF724E7FA4700BEE369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2162BEFB24E8020C00BEE369 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		21892ACA24E5209000630677 /* PollingController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PollingController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21892ACD24E5209000630677 /* PollingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PollingController.h; sourceTree = "<group>"; };
 		21892ACE24E5209000630677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,13 +70,28 @@
 		21892AD824E5209000630677 /* PollingControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollingControllerTests.swift; sourceTree = "<group>"; };
 		21892ADA24E5209000630677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21892AE624E521A600630677 /* PollingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollingController.swift; sourceTree = "<group>"; };
+		619A5ED99EC2CD54692AC511 /* Pods-PollingController-PollingControllerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingController-PollingControllerTests.debug.xcconfig"; path = "Target Support Files/Pods-PollingController-PollingControllerTests/Pods-PollingController-PollingControllerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		71B190AB05E9F812AAD6C1FE /* Pods-PollingController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingController.debug.xcconfig"; path = "Target Support Files/Pods-PollingController/Pods-PollingController.debug.xcconfig"; sourceTree = "<group>"; };
+		91187777334BC59C6672FAEF /* Pods-PollingController-PollingControllerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingController-PollingControllerTests.release.xcconfig"; path = "Target Support Files/Pods-PollingController-PollingControllerTests/Pods-PollingController-PollingControllerTests.release.xcconfig"; sourceTree = "<group>"; };
+		9E8F674FF5DE3EA8C5031354 /* Pods_PollingController_PollingControllerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PollingController_PollingControllerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8940BD2BCE914C9469309BD /* Pods_PollingController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PollingController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB8B715D59F190101EEB1B62 /* Pods-PollingController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingController.release.xcconfig"; path = "Target Support Files/Pods-PollingController/Pods-PollingController.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2162BEE424E7FA4500BEE369 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2162BEFD24E80D8400BEE369 /* PollingController.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21892AC724E5209000630677 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E65C2F093E38031967DA2619 /* Pods_PollingController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,18 +100,44 @@
 			buildActionMask = 2147483647;
 			files = (
 				21892AD424E5209000630677 /* PollingController.framework in Frameworks */,
+				B6EC14F9B75B82597608DB2F /* Pods_PollingController_PollingControllerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2162BEE224E7F9B200BEE369 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				21892AE624E521A600630677 /* PollingController.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		2162BEE824E7FA4500BEE369 /* PollingControllerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				2162BEE924E7FA4500BEE369 /* AppDelegate.swift */,
+				2162BEED24E7FA4500BEE369 /* ViewController.swift */,
+				2162BEFB24E8020C00BEE369 /* GraphView.swift */,
+				2162BEEF24E7FA4500BEE369 /* Main.storyboard */,
+				2162BEF224E7FA4700BEE369 /* Assets.xcassets */,
+				2162BEF424E7FA4700BEE369 /* LaunchScreen.storyboard */,
+				2162BEF724E7FA4700BEE369 /* Info.plist */,
+			);
+			path = PollingControllerDemo;
+			sourceTree = "<group>";
+		};
 		21892AC024E5209000630677 = {
 			isa = PBXGroup;
 			children = (
 				21892ACC24E5209000630677 /* PollingController */,
 				21892AD724E5209000630677 /* PollingControllerTests */,
+				2162BEE824E7FA4500BEE369 /* PollingControllerDemo */,
 				21892ACB24E5209000630677 /* Products */,
+				82F4FFDEA844FD24DF956103 /* Pods */,
+				A91C4317CCA22882BF506148 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +146,7 @@
 			children = (
 				21892ACA24E5209000630677 /* PollingController.framework */,
 				21892AD324E5209000630677 /* PollingControllerTests.xctest */,
+				2162BEE724E7FA4500BEE369 /* PollingControllerDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,7 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				21892AE424E520BC00630677 /* Supporting Files */,
-				21892AE624E521A600630677 /* PollingController.swift */,
+				2162BEE224E7F9B200BEE369 /* Sources */,
 			);
 			path = PollingController;
 			sourceTree = "<group>";
@@ -105,6 +186,26 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		82F4FFDEA844FD24DF956103 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				71B190AB05E9F812AAD6C1FE /* Pods-PollingController.debug.xcconfig */,
+				FB8B715D59F190101EEB1B62 /* Pods-PollingController.release.xcconfig */,
+				619A5ED99EC2CD54692AC511 /* Pods-PollingController-PollingControllerTests.debug.xcconfig */,
+				91187777334BC59C6672FAEF /* Pods-PollingController-PollingControllerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A91C4317CCA22882BF506148 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8940BD2BCE914C9469309BD /* Pods_PollingController.framework */,
+				9E8F674FF5DE3EA8C5031354 /* Pods_PollingController_PollingControllerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -119,14 +220,35 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		2162BEE624E7FA4500BEE369 /* PollingControllerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2162BEFA24E7FA4700BEE369 /* Build configuration list for PBXNativeTarget "PollingControllerDemo" */;
+			buildPhases = (
+				2162BEE324E7FA4500BEE369 /* Sources */,
+				2162BEE424E7FA4500BEE369 /* Frameworks */,
+				2162BEE524E7FA4500BEE369 /* Resources */,
+				2162BF0124E80D8400BEE369 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2162BF0024E80D8400BEE369 /* PBXTargetDependency */,
+			);
+			name = PollingControllerDemo;
+			productName = PollingControllerDemo;
+			productReference = 2162BEE724E7FA4500BEE369 /* PollingControllerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 		21892AC924E5209000630677 /* PollingController */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21892ADE24E5209000630677 /* Build configuration list for PBXNativeTarget "PollingController" */;
 			buildPhases = (
+				595C142B1DAABAA041CD192E /* [CP] Check Pods Manifest.lock */,
 				21892AC524E5209000630677 /* Headers */,
 				21892AC624E5209000630677 /* Sources */,
 				21892AC724E5209000630677 /* Frameworks */,
 				21892AC824E5209000630677 /* Resources */,
+				2162BEE124E7E31C00BEE369 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -141,6 +263,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21892AE124E5209000630677 /* Build configuration list for PBXNativeTarget "PollingControllerTests" */;
 			buildPhases = (
+				7F29007507C7E1A01901CCA1 /* [CP] Check Pods Manifest.lock */,
 				21892ACF24E5209000630677 /* Sources */,
 				21892AD024E5209000630677 /* Frameworks */,
 				21892AD124E5209000630677 /* Resources */,
@@ -165,6 +288,9 @@
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = "Lukas Würzburger";
 				TargetAttributes = {
+					2162BEE624E7FA4500BEE369 = {
+						CreatedOnToolsVersion = 11.6;
+					};
 					21892AC924E5209000630677 = {
 						CreatedOnToolsVersion = 11.6;
 						LastSwiftMigration = 1160;
@@ -189,11 +315,22 @@
 			targets = (
 				21892AC924E5209000630677 /* PollingController */,
 				21892AD224E5209000630677 /* PollingControllerTests */,
+				2162BEE624E7FA4500BEE369 /* PollingControllerDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2162BEE524E7FA4500BEE369 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2162BEF624E7FA4700BEE369 /* LaunchScreen.storyboard in Resources */,
+				2162BEF324E7FA4700BEE369 /* Assets.xcassets in Resources */,
+				2162BEF124E7FA4500BEE369 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21892AC824E5209000630677 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -210,7 +347,82 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2162BEE124E7E31C00BEE369 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		595C142B1DAABAA041CD192E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PollingController-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F29007507C7E1A01901CCA1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PollingController-PollingControllerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		2162BEE324E7FA4500BEE369 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2162BEEE24E7FA4500BEE369 /* ViewController.swift in Sources */,
+				2162BEEA24E7FA4500BEE369 /* AppDelegate.swift in Sources */,
+				2162BEFC24E8020C00BEE369 /* GraphView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21892AC624E5209000630677 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -230,6 +442,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2162BF0024E80D8400BEE369 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21892AC924E5209000630677 /* PollingController */;
+			targetProxy = 2162BEFF24E80D8400BEE369 /* PBXContainerItemProxy */;
+		};
 		21892AD624E5209000630677 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 21892AC924E5209000630677 /* PollingController */;
@@ -237,7 +454,62 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		2162BEEF24E7FA4500BEE369 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2162BEF024E7FA4500BEE369 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2162BEF424E7FA4700BEE369 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2162BEF524E7FA4700BEE369 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		2162BEF824E7FA4700BEE369 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PollingControllerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.lukaswuerzburger.PollingControllerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2162BEF924E7FA4700BEE369 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PollingControllerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.lukaswuerzburger.PollingControllerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		21892ADC24E5209000630677 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -360,6 +632,7 @@
 		};
 		21892ADF24E5209000630677 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71B190AB05E9F812AAD6C1FE /* Pods-PollingController.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -386,6 +659,7 @@
 		};
 		21892AE024E5209000630677 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB8B715D59F190101EEB1B62 /* Pods-PollingController.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -411,6 +685,7 @@
 		};
 		21892AE224E5209000630677 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 619A5ED99EC2CD54692AC511 /* Pods-PollingController-PollingControllerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -430,6 +705,7 @@
 		};
 		21892AE324E5209000630677 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91187777334BC59C6672FAEF /* Pods-PollingController-PollingControllerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,6 +726,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2162BEFA24E7FA4700BEE369 /* Build configuration list for PBXNativeTarget "PollingControllerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2162BEF824E7FA4700BEE369 /* Debug */,
+				2162BEF924E7FA4700BEE369 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		21892AC424E5209000630677 /* Build configuration list for PBXProject "PollingController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
