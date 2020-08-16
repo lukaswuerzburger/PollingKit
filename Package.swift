@@ -8,7 +8,8 @@ import PackageDescription
 let package = Package(
     name: "PollingController",
     platforms: [
-        .iOS(.v10)
+        .iOS(.v10),
+        .macOS(.v10_14)
     ],
     products: [
         .library(
