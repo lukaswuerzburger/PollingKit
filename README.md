@@ -54,7 +54,7 @@ pod 'PollingController'
 Add the following to your `Package.swift` file:
 ```swift
 dependencies: [
-    .package(url: "https://github.com/lukaswuerzburger/PollingController.git", from: "1.0.0")
+    .package(url: "https://github.com/lukaswuerzburger/PollingController.git", from: "1.1.0")
 ]
 ```
 
