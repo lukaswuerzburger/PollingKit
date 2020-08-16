@@ -25,7 +25,7 @@ The `PollingController` does the timed long-term polling for you and takes care 
 ## 🖥 Example
 
 ```swift
-pollingController = PollingController(preferredInterval: 5) { callback in
+let pollingController = PollingController(preferredInterval: 5) { callback in
 
     // Imagine an API call being made here.
     loadSomethingAsynchronously() {
@@ -35,6 +35,8 @@ pollingController = PollingController(preferredInterval: 5) { callback in
 ```
 
 ## 🎟 Demo
+
+This demo shows how the `PollingController` switches states.
 
 <img src="https://raw.githubusercontent.com/lukaswuerzburger/PollingController/develop/readme-images/demo.gif" alt="PollingController Demo" title="PollingController Demo" width="320"/>
 
