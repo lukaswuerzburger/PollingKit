@@ -11,6 +11,8 @@ namespace :test do
     run('test', 'PollingKit', 'Debug', 'iPhone 8', '11.4')
     run('test', 'PollingKit', 'Debug', 'iPhone Xs', '12.4')
     run('test', 'PollingKit', 'Debug', 'iPhone SE (2nd generation)', '13.6')
+    run('test', 'PollingKit', 'Debug', 'iPhone SE (2nd generation)', '14.5')
+    run('test', 'PollingKit', 'Debug', 'iPhone SE (2nd generation)', '15.2')
   end
 
   desc 'Build the Demo App'
