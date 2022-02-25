@@ -1,9 +1,9 @@
 use_frameworks!
 platform :ios, '10.0'
 
-target 'PollingController' do
+target 'PollingKit' do
   pod 'SwiftLint'
 
-  target 'PollingControllerTests' do
+  target 'PollingKitTests' do
   end
 end

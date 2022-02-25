@@ -7,15 +7,15 @@ namespace :test do
 
   desc 'Run the unit tests'
   task ios: :prepare do
-    run('test', 'PollingController', 'Debug', 'iPhone 7', '10.3.1')
-    run('test', 'PollingController', 'Debug', 'iPhone 8', '11.4')
-    run('test', 'PollingController', 'Debug', 'iPhone Xs', '12.4')
-    run('test', 'PollingController', 'Debug', 'iPhone SE (2nd generation)', '13.6')
+    run('test', 'PollingKit', 'Debug', 'iPhone 7', '10.3.1')
+    run('test', 'PollingKit', 'Debug', 'iPhone 8', '11.4')
+    run('test', 'PollingKit', 'Debug', 'iPhone Xs', '12.4')
+    run('test', 'PollingKit', 'Debug', 'iPhone SE (2nd generation)', '13.6')
   end
 
   desc 'Build the Demo App'
   task ios_example: :prepare do
-    run('build', 'PollingControllerDemo', 'Release', 'iPhone SE (2nd generation)', '13.6')
+    run('build', 'PollingKitDemo', 'Release', 'iPhone SE (2nd generation)', '13.6')
   end
 end
 
@@ -46,7 +46,7 @@ task default: 'test'
 private
 
 def run(operation, scheme, configuration, device, os)
-    sh("xcodebuild -workspace PollingController.xcworkspace -scheme '#{scheme}' -sdk 'iphonesimulator' -destination 'platform=iOS Simulator,name=#{device},OS=#{os}' -configuration #{configuration} clean #{operation} | xcpretty") rescue nil
+    sh("xcodebuild -workspace PollingKit.xcworkspace -scheme '#{scheme}' -sdk 'iphonesimulator' -destination 'platform=iOS Simulator,name=#{device},OS=#{os}' -configuration #{configuration} clean #{operation} | xcpretty") rescue nil
     if $?.success?
         succeeded("#{device}, #{os}", operation)
     else

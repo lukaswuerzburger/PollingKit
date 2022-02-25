@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1783CF0DFE55251254E71334 /* Pods_PollingKit_PollingKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C85D2DBECD43659D9AA2296 /* Pods_PollingKit_PollingKitTests.framework */; };
 		2162BEEA24E7FA4500BEE369 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2162BEE924E7FA4500BEE369 /* AppDelegate.swift */; };
 		2162BEEE24E7FA4500BEE369 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2162BEED24E7FA4500BEE369 /* ViewController.swift */; };
 		2162BEF124E7FA4500BEE369 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2162BEEF24E7FA4500BEE369 /* Main.storyboard */; };
 		2162BEF324E7FA4700BEE369 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2162BEF224E7FA4700BEE369 /* Assets.xcassets */; };
 		2162BEF624E7FA4700BEE369 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2162BEF424E7FA4700BEE369 /* LaunchScreen.storyboard */; };
 		2162BEFC24E8020C00BEE369 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2162BEFB24E8020C00BEE369 /* GraphView.swift */; };
-		2162BEFD24E80D8400BEE369 /* PollingController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21892ACA24E5209000630677 /* PollingController.framework */; };
-		2162BEFE24E80D8400BEE369 /* PollingController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21892ACA24E5209000630677 /* PollingController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		21892AD424E5209000630677 /* PollingController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21892ACA24E5209000630677 /* PollingController.framework */; };
+		2162BEFD24E80D8400BEE369 /* PollingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21892ACA24E5209000630677 /* PollingKit.framework */; };
+		2162BEFE24E80D8400BEE369 /* PollingKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21892ACA24E5209000630677 /* PollingKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		21892AD424E5209000630677 /* PollingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21892ACA24E5209000630677 /* PollingKit.framework */; };
 		21892AD924E5209000630677 /* PollingControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21892AD824E5209000630677 /* PollingControllerTests.swift */; };
-		21892ADB24E5209000630677 /* PollingController.h in Headers */ = {isa = PBXBuildFile; fileRef = 21892ACD24E5209000630677 /* PollingController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21892ADB24E5209000630677 /* PollingKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 21892ACD24E5209000630677 /* PollingKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21892AE724E521A600630677 /* PollingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21892AE624E521A600630677 /* PollingController.swift */; };
-		B6EC14F9B75B82597608DB2F /* Pods_PollingController_PollingControllerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E8F674FF5DE3EA8C5031354 /* Pods_PollingController_PollingControllerTests.framework */; };
-		E65C2F093E38031967DA2619 /* Pods_PollingController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8940BD2BCE914C9469309BD /* Pods_PollingController.framework */; };
+		96448E767F34F61841F287E5 /* Pods_PollingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7706E928561859C84566676 /* Pods_PollingKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +47,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2162BEFE24E80D8400BEE369 /* PollingController.framework in Embed Frameworks */,
+				2162BEFE24E80D8400BEE369 /* PollingKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,7 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2162BEE724E7FA4500BEE369 /* PollingControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PollingControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2162BEE724E7FA4500BEE369 /* PollingKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PollingKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2162BEE924E7FA4500BEE369 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2162BEED24E7FA4500BEE369 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2162BEF024E7FA4500BEE369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,18 +63,22 @@
 		2162BEF524E7FA4700BEE369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2162BEF724E7FA4700BEE369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2162BEFB24E8020C00BEE369 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
-		21892ACA24E5209000630677 /* PollingController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PollingController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		21892ACD24E5209000630677 /* PollingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PollingController.h; sourceTree = "<group>"; };
+		21892ACA24E5209000630677 /* PollingKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PollingKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21892ACD24E5209000630677 /* PollingKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PollingKit.h; sourceTree = "<group>"; };
 		21892ACE24E5209000630677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		21892AD324E5209000630677 /* PollingControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PollingControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		21892AD324E5209000630677 /* PollingKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PollingKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21892AD824E5209000630677 /* PollingControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollingControllerTests.swift; sourceTree = "<group>"; };
 		21892ADA24E5209000630677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21892AE624E521A600630677 /* PollingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollingController.swift; sourceTree = "<group>"; };
+		2DF9B12943998A4361114879 /* Pods-PollingKit-PollingKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingKit-PollingKitTests.debug.xcconfig"; path = "Target Support Files/Pods-PollingKit-PollingKitTests/Pods-PollingKit-PollingKitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		619A5ED99EC2CD54692AC511 /* Pods-PollingController-PollingControllerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingController-PollingControllerTests.debug.xcconfig"; path = "Target Support Files/Pods-PollingController-PollingControllerTests/Pods-PollingController-PollingControllerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		687104E58C1DDC0714385111 /* Pods-PollingKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingKit.release.xcconfig"; path = "Target Support Files/Pods-PollingKit/Pods-PollingKit.release.xcconfig"; sourceTree = "<group>"; };
 		71B190AB05E9F812AAD6C1FE /* Pods-PollingController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingController.debug.xcconfig"; path = "Target Support Files/Pods-PollingController/Pods-PollingController.debug.xcconfig"; sourceTree = "<group>"; };
+		851B9F2F69A0E8F4D5874934 /* Pods-PollingKit-PollingKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingKit-PollingKitTests.release.xcconfig"; path = "Target Support Files/Pods-PollingKit-PollingKitTests/Pods-PollingKit-PollingKitTests.release.xcconfig"; sourceTree = "<group>"; };
+		8C85D2DBECD43659D9AA2296 /* Pods_PollingKit_PollingKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PollingKit_PollingKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91187777334BC59C6672FAEF /* Pods-PollingController-PollingControllerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingController-PollingControllerTests.release.xcconfig"; path = "Target Support Files/Pods-PollingController-PollingControllerTests/Pods-PollingController-PollingControllerTests.release.xcconfig"; sourceTree = "<group>"; };
-		9E8F674FF5DE3EA8C5031354 /* Pods_PollingController_PollingControllerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PollingController_PollingControllerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D8940BD2BCE914C9469309BD /* Pods_PollingController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PollingController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		98F0D1C3BDC01C41F15A03C0 /* Pods-PollingKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingKit.debug.xcconfig"; path = "Target Support Files/Pods-PollingKit/Pods-PollingKit.debug.xcconfig"; sourceTree = "<group>"; };
+		B7706E928561859C84566676 /* Pods_PollingKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PollingKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB8B715D59F190101EEB1B62 /* Pods-PollingController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingController.release.xcconfig"; path = "Target Support Files/Pods-PollingController/Pods-PollingController.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2162BEFD24E80D8400BEE369 /* PollingController.framework in Frameworks */,
+				2162BEFD24E80D8400BEE369 /* PollingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E65C2F093E38031967DA2619 /* Pods_PollingController.framework in Frameworks */,
+				96448E767F34F61841F287E5 /* Pods_PollingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,8 +103,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21892AD424E5209000630677 /* PollingController.framework in Frameworks */,
-				B6EC14F9B75B82597608DB2F /* Pods_PollingController_PollingControllerTests.framework in Frameworks */,
+				21892AD424E5209000630677 /* PollingKit.framework in Frameworks */,
+				1783CF0DFE55251254E71334 /* Pods_PollingKit_PollingKitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +119,7 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		2162BEE824E7FA4500BEE369 /* PollingControllerDemo */ = {
+		2162BEE824E7FA4500BEE369 /* PollingKitDemo */ = {
 			isa = PBXGroup;
 			children = (
 				2162BEE924E7FA4500BEE369 /* AppDelegate.swift */,
@@ -126,15 +130,15 @@
 				2162BEF424E7FA4700BEE369 /* LaunchScreen.storyboard */,
 				2162BEF724E7FA4700BEE369 /* Info.plist */,
 			);
-			path = PollingControllerDemo;
+			path = PollingKitDemo;
 			sourceTree = "<group>";
 		};
 		21892AC024E5209000630677 = {
 			isa = PBXGroup;
 			children = (
-				21892ACC24E5209000630677 /* PollingController */,
-				21892AD724E5209000630677 /* PollingControllerTests */,
-				2162BEE824E7FA4500BEE369 /* PollingControllerDemo */,
+				21892ACC24E5209000630677 /* PollingKit */,
+				21892AD724E5209000630677 /* PollingKitTests */,
+				2162BEE824E7FA4500BEE369 /* PollingKitDemo */,
 				21892ACB24E5209000630677 /* Products */,
 				82F4FFDEA844FD24DF956103 /* Pods */,
 				A91C4317CCA22882BF506148 /* Frameworks */,
@@ -144,35 +148,35 @@
 		21892ACB24E5209000630677 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				21892ACA24E5209000630677 /* PollingController.framework */,
-				21892AD324E5209000630677 /* PollingControllerTests.xctest */,
-				2162BEE724E7FA4500BEE369 /* PollingControllerDemo.app */,
+				21892ACA24E5209000630677 /* PollingKit.framework */,
+				21892AD324E5209000630677 /* PollingKitTests.xctest */,
+				2162BEE724E7FA4500BEE369 /* PollingKitDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		21892ACC24E5209000630677 /* PollingController */ = {
+		21892ACC24E5209000630677 /* PollingKit */ = {
 			isa = PBXGroup;
 			children = (
 				21892AE424E520BC00630677 /* Supporting Files */,
 				2162BEE224E7F9B200BEE369 /* Sources */,
 			);
-			path = PollingController;
+			path = PollingKit;
 			sourceTree = "<group>";
 		};
-		21892AD724E5209000630677 /* PollingControllerTests */ = {
+		21892AD724E5209000630677 /* PollingKitTests */ = {
 			isa = PBXGroup;
 			children = (
 				21892AE524E520C300630677 /* Supporting Files */,
 				21892AD824E5209000630677 /* PollingControllerTests.swift */,
 			);
-			path = PollingControllerTests;
+			path = PollingKitTests;
 			sourceTree = "<group>";
 		};
 		21892AE424E520BC00630677 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				21892ACD24E5209000630677 /* PollingController.h */,
+				21892ACD24E5209000630677 /* PollingKit.h */,
 				21892ACE24E5209000630677 /* Info.plist */,
 			);
 			path = "Supporting Files";
@@ -193,6 +197,10 @@
 				FB8B715D59F190101EEB1B62 /* Pods-PollingController.release.xcconfig */,
 				619A5ED99EC2CD54692AC511 /* Pods-PollingController-PollingControllerTests.debug.xcconfig */,
 				91187777334BC59C6672FAEF /* Pods-PollingController-PollingControllerTests.release.xcconfig */,
+				98F0D1C3BDC01C41F15A03C0 /* Pods-PollingKit.debug.xcconfig */,
+				687104E58C1DDC0714385111 /* Pods-PollingKit.release.xcconfig */,
+				2DF9B12943998A4361114879 /* Pods-PollingKit-PollingKitTests.debug.xcconfig */,
+				851B9F2F69A0E8F4D5874934 /* Pods-PollingKit-PollingKitTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -200,8 +208,8 @@
 		A91C4317CCA22882BF506148 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D8940BD2BCE914C9469309BD /* Pods_PollingController.framework */,
-				9E8F674FF5DE3EA8C5031354 /* Pods_PollingController_PollingControllerTests.framework */,
+				B7706E928561859C84566676 /* Pods_PollingKit.framework */,
+				8C85D2DBECD43659D9AA2296 /* Pods_PollingKit_PollingKitTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -213,16 +221,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21892ADB24E5209000630677 /* PollingController.h in Headers */,
+				21892ADB24E5209000630677 /* PollingKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2162BEE624E7FA4500BEE369 /* PollingControllerDemo */ = {
+		2162BEE624E7FA4500BEE369 /* PollingKitDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2162BEFA24E7FA4700BEE369 /* Build configuration list for PBXNativeTarget "PollingControllerDemo" */;
+			buildConfigurationList = 2162BEFA24E7FA4700BEE369 /* Build configuration list for PBXNativeTarget "PollingKitDemo" */;
 			buildPhases = (
 				2162BEE324E7FA4500BEE369 /* Sources */,
 				2162BEE424E7FA4500BEE369 /* Frameworks */,
@@ -234,14 +242,14 @@
 			dependencies = (
 				2162BF0024E80D8400BEE369 /* PBXTargetDependency */,
 			);
-			name = PollingControllerDemo;
+			name = PollingKitDemo;
 			productName = PollingControllerDemo;
-			productReference = 2162BEE724E7FA4500BEE369 /* PollingControllerDemo.app */;
+			productReference = 2162BEE724E7FA4500BEE369 /* PollingKitDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		21892AC924E5209000630677 /* PollingController */ = {
+		21892AC924E5209000630677 /* PollingKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 21892ADE24E5209000630677 /* Build configuration list for PBXNativeTarget "PollingController" */;
+			buildConfigurationList = 21892ADE24E5209000630677 /* Build configuration list for PBXNativeTarget "PollingKit" */;
 			buildPhases = (
 				595C142B1DAABAA041CD192E /* [CP] Check Pods Manifest.lock */,
 				21892AC524E5209000630677 /* Headers */,
@@ -254,14 +262,14 @@
 			);
 			dependencies = (
 			);
-			name = PollingController;
+			name = PollingKit;
 			productName = PollingController;
-			productReference = 21892ACA24E5209000630677 /* PollingController.framework */;
+			productReference = 21892ACA24E5209000630677 /* PollingKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		21892AD224E5209000630677 /* PollingControllerTests */ = {
+		21892AD224E5209000630677 /* PollingKitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 21892AE124E5209000630677 /* Build configuration list for PBXNativeTarget "PollingControllerTests" */;
+			buildConfigurationList = 21892AE124E5209000630677 /* Build configuration list for PBXNativeTarget "PollingKitTests" */;
 			buildPhases = (
 				7F29007507C7E1A01901CCA1 /* [CP] Check Pods Manifest.lock */,
 				21892ACF24E5209000630677 /* Sources */,
@@ -273,9 +281,9 @@
 			dependencies = (
 				21892AD624E5209000630677 /* PBXTargetDependency */,
 			);
-			name = PollingControllerTests;
+			name = PollingKitTests;
 			productName = PollingControllerTests;
-			productReference = 21892AD324E5209000630677 /* PollingControllerTests.xctest */;
+			productReference = 21892AD324E5209000630677 /* PollingKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -300,7 +308,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 21892AC424E5209000630677 /* Build configuration list for PBXProject "PollingController" */;
+			buildConfigurationList = 21892AC424E5209000630677 /* Build configuration list for PBXProject "PollingKit" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -313,9 +321,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				21892AC924E5209000630677 /* PollingController */,
-				21892AD224E5209000630677 /* PollingControllerTests */,
-				2162BEE624E7FA4500BEE369 /* PollingControllerDemo */,
+				21892AC924E5209000630677 /* PollingKit */,
+				21892AD224E5209000630677 /* PollingKitTests */,
+				2162BEE624E7FA4500BEE369 /* PollingKitDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -381,7 +389,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PollingController-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-PollingKit-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -403,7 +411,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PollingController-PollingControllerTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-PollingKit-PollingKitTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -444,12 +452,12 @@
 /* Begin PBXTargetDependency section */
 		2162BF0024E80D8400BEE369 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 21892AC924E5209000630677 /* PollingController */;
+			target = 21892AC924E5209000630677 /* PollingKit */;
 			targetProxy = 2162BEFF24E80D8400BEE369 /* PBXContainerItemProxy */;
 		};
 		21892AD624E5209000630677 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 21892AC924E5209000630677 /* PollingController */;
+			target = 21892AC924E5209000630677 /* PollingKit */;
 			targetProxy = 21892AD524E5209000630677 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -479,13 +487,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PollingControllerDemo/Info.plist;
+				INFOPLIST_FILE = PollingKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.lukaswuerzburger.PollingControllerDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = de.lukaswuerzburger.PollingKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -497,13 +505,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PollingControllerDemo/Info.plist;
+				INFOPLIST_FILE = PollingKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.lukaswuerzburger.PollingControllerDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = de.lukaswuerzburger.PollingKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -634,7 +642,7 @@
 		};
 		21892ADF24E5209000630677 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 71B190AB05E9F812AAD6C1FE /* Pods-PollingController.debug.xcconfig */;
+			baseConfigurationReference = 98F0D1C3BDC01C41F15A03C0 /* Pods-PollingKit.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -643,14 +651,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "PollingController/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "PollingKit/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.lukaswuerzburger.PollingController;
+				PRODUCT_BUNDLE_IDENTIFIER = de.lukaswuerzburger.PollingKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -661,7 +669,7 @@
 		};
 		21892AE024E5209000630677 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB8B715D59F190101EEB1B62 /* Pods-PollingController.release.xcconfig */;
+			baseConfigurationReference = 687104E58C1DDC0714385111 /* Pods-PollingKit.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -670,14 +678,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "PollingController/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "PollingKit/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.lukaswuerzburger.PollingController;
+				PRODUCT_BUNDLE_IDENTIFIER = de.lukaswuerzburger.PollingKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -687,18 +695,18 @@
 		};
 		21892AE224E5209000630677 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 619A5ED99EC2CD54692AC511 /* Pods-PollingController-PollingControllerTests.debug.xcconfig */;
+			baseConfigurationReference = 2DF9B12943998A4361114879 /* Pods-PollingKit-PollingKitTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UE4U5XA7R9;
-				INFOPLIST_FILE = "PollingControllerTests/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "PollingKitTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.lukaswuerzburger.PollingControllerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = de.lukaswuerzburger.PollingKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -707,18 +715,18 @@
 		};
 		21892AE324E5209000630677 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91187777334BC59C6672FAEF /* Pods-PollingController-PollingControllerTests.release.xcconfig */;
+			baseConfigurationReference = 851B9F2F69A0E8F4D5874934 /* Pods-PollingKit-PollingKitTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UE4U5XA7R9;
-				INFOPLIST_FILE = "PollingControllerTests/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "PollingKitTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.lukaswuerzburger.PollingControllerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = de.lukaswuerzburger.PollingKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -728,7 +736,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2162BEFA24E7FA4700BEE369 /* Build configuration list for PBXNativeTarget "PollingControllerDemo" */ = {
+		2162BEFA24E7FA4700BEE369 /* Build configuration list for PBXNativeTarget "PollingKitDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2162BEF824E7FA4700BEE369 /* Debug */,
@@ -737,7 +745,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		21892AC424E5209000630677 /* Build configuration list for PBXProject "PollingController" */ = {
+		21892AC424E5209000630677 /* Build configuration list for PBXProject "PollingKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				21892ADC24E5209000630677 /* Debug */,
@@ -746,7 +754,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		21892ADE24E5209000630677 /* Build configuration list for PBXNativeTarget "PollingController" */ = {
+		21892ADE24E5209000630677 /* Build configuration list for PBXNativeTarget "PollingKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				21892ADF24E5209000630677 /* Debug */,
@@ -755,7 +763,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		21892AE124E5209000630677 /* Build configuration list for PBXNativeTarget "PollingControllerTests" */ = {
+		21892AE124E5209000630677 /* Build configuration list for PBXNativeTarget "PollingKitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				21892AE224E5209000630677 /* Debug */,
