@@ -1,6 +1,6 @@
 //
 //  PollingController.swift
-//  PollingController
+//  PollingKit
 //
 //  Created by Lukas Würzburger on 8/13/20.
 //  Copyright © 2020 Lukas Würzburger. All rights reserved.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol PollingControllerDelegate: class {
+public protocol PollingControllerDelegate: AnyObject {
     func pollingController(_ pollingController: PollingController, didChangeState state: PollingController.State)
 }
 

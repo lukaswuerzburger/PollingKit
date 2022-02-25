@@ -7,6 +7,7 @@
 *~.nib
 DerivedData/
 build/
+.build/
 *.pbxuser
 *.mode1v3
 *.mode2v3
@@ -24,3 +25,4 @@ fastlane/report.xml
 fastlane/test_output
 Preview.html
 .bundle/
+.swiftpm/

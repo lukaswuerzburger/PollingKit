@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  PollingControllerDemo
+//  PollingKitDemo
 //
 //  Created by Lukas Würzburger on 8/15/20.
 //  Copyright © 2020 Lukas Würzburger. All rights reserved.

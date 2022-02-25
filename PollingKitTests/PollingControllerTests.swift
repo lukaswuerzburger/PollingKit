@@ -1,13 +1,13 @@
 //
 //  PollingControllerTests.swift
-//  PollingControllerTests
+//  PollingKitTests
 //
 //  Created by Lukas Würzburger on 8/13/20.
 //  Copyright © 2020 Lukas Würzburger. All rights reserved.
 //
 
 import XCTest
-@testable import PollingController
+@testable import PollingKit
 
 class PollingControllerTests: XCTestCase {
 

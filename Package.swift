@@ -6,21 +6,21 @@
 import PackageDescription
 
 let package = Package(
-    name: "PollingController",
+    name: "PollingKit",
     platforms: [
         .iOS(.v10),
         .macOS(.v10_14)
     ],
     products: [
         .library(
-            name: "PollingController",
-            targets: ["PollingController"]
+            name: "PollingKit",
+            targets: ["PollingKit"]
         )
     ],
     targets: [
         .target(
-            name: "PollingController",
-            path: "PollingController"
+            name: "PollingKit",
+            path: "PollingKit"
         )
     ],
     swiftLanguageVersions: [
