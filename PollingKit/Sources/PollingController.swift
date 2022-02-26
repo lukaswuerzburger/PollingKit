@@ -9,23 +9,30 @@
 import Foundation
 
 public protocol PollingControllerDelegate: AnyObject {
-    func pollingController(_ pollingController: PollingController, didChangeState state: PollingController.State)
+    func pollingController(_ pollingController: PollingController, didChangeState state: PollingState)
 }
 
-public class PollingController {
+final public class PollingController {
+
+    // MARK: - Dependencies
+
+    internal var timerFactory: TimerFactoryType = TimerFactory()
+    internal var dateFactory: DateFactoryType = DateFactory()
 
     // MARK: - Variables
 
-    var timer: Timer?
-    var lastTimerTicked: Date?
-    var handler: (@escaping () -> Void) -> Void
+    internal var timer: TimerType?
+    internal var lastTimerTicked: Date?
+    internal var handler: (@escaping () -> Void) -> Void
 
     /// A delegate object to communicate state changes to.
     public weak var delegate: PollingControllerDelegate?
 
     /// The current state of the mechanics, covering waiting for callbacks and timer state.
-    public private(set) var state: State = .idle {
-        didSet { delegate?.pollingController(self, didChangeState: state) }
+    public private(set) var state: PollingState = .idle {
+        didSet {
+            delegate?.pollingController(self, didChangeState: state)
+        }
     }
 
     /// The preferred interval for the timer to invoke the handler. Due to possible belated
@@ -75,7 +82,7 @@ public class PollingController {
 
     func startTimerIfNecessary() {
         guard timer == nil else { return }
-        timer = Timer.scheduledTimer(withTimeInterval: preferredInterval, repeats: true) { [weak self] _ in
+        timer = timerFactory.timer(interval: preferredInterval, repeats: true) { [weak self] _ in
             self?.handleTimerTick()
         }
         state = .waitingForTimerTick
@@ -121,34 +128,17 @@ public class PollingController {
     }
 }
 
-// MARK: - 
+// MARK: -
 
-extension PollingController {
-
-    public enum State {
-
-        /// Polling has not been started or it has been stopped.
-        case idle
-
-        /// Waiting for the handler to invoke the callback.
-        case runningWithTimer
-
-        /// Waiting for the handler to invoke the callback and the timer has exeeded its
-        /// interval time.
-        case runningWithoutTimer
-
-        /// Handler did invoke the callback and still waiting for the timer to tick.
-        case waitingForTimerTick
-    }
-}
-
-extension PollingController.State {
+private extension PollingState {
 
     var canFireHandler: Bool {
-        return [
-            .idle,
-            .waitingForTimerTick
-        ].contains(self)
+        switch self {
+        case .idle, .waitingForTimerTick:
+            return true
+        default:
+            return false
+        }
     }
 
     var isRunning: Bool {
