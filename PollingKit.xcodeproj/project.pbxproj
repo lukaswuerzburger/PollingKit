@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11AA437527C96A420009A0D3 /* TimerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA437427C96A420009A0D3 /* TimerType.swift */; };
+		11AA437727C96A680009A0D3 /* TimerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA437627C96A680009A0D3 /* TimerFactory.swift */; };
+		11AA437927C96A7A0009A0D3 /* DateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA437827C96A7A0009A0D3 /* DateFactory.swift */; };
+		11AA437B27C96ACD0009A0D3 /* PollingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA437A27C96ACD0009A0D3 /* PollingState.swift */; };
+		11AA437D27C96B9F0009A0D3 /* PollingControllerDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA437C27C96B9F0009A0D3 /* PollingControllerDelegateMock.swift */; };
+		11AA437F27C96C1A0009A0D3 /* TimerFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA437E27C96C1A0009A0D3 /* TimerFactoryMock.swift */; };
+		11AA438227C96C2A0009A0D3 /* DateFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA438127C96C2A0009A0D3 /* DateFactoryMock.swift */; };
 		1783CF0DFE55251254E71334 /* Pods_PollingKit_PollingKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C85D2DBECD43659D9AA2296 /* Pods_PollingKit_PollingKitTests.framework */; };
 		2162BEEA24E7FA4500BEE369 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2162BEE924E7FA4500BEE369 /* AppDelegate.swift */; };
 		2162BEEE24E7FA4500BEE369 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2162BEED24E7FA4500BEE369 /* ViewController.swift */; };
@@ -20,6 +27,7 @@
 		21892AD924E5209000630677 /* PollingControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21892AD824E5209000630677 /* PollingControllerTests.swift */; };
 		21892ADB24E5209000630677 /* PollingKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 21892ACD24E5209000630677 /* PollingKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21892AE724E521A600630677 /* PollingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21892AE624E521A600630677 /* PollingController.swift */; };
+		80C16BD127CC13FB00AB6FBC /* TimerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C16BD027CC13FB00AB6FBC /* TimerMock.swift */; };
 		96448E767F34F61841F287E5 /* Pods_PollingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7706E928561859C84566676 /* Pods_PollingKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +63,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		11AA437427C96A420009A0D3 /* TimerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerType.swift; sourceTree = "<group>"; };
+		11AA437627C96A680009A0D3 /* TimerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerFactory.swift; sourceTree = "<group>"; };
+		11AA437827C96A7A0009A0D3 /* DateFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFactory.swift; sourceTree = "<group>"; };
+		11AA437A27C96ACD0009A0D3 /* PollingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollingState.swift; sourceTree = "<group>"; };
+		11AA437C27C96B9F0009A0D3 /* PollingControllerDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollingControllerDelegateMock.swift; sourceTree = "<group>"; };
+		11AA437E27C96C1A0009A0D3 /* TimerFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerFactoryMock.swift; sourceTree = "<group>"; };
+		11AA438127C96C2A0009A0D3 /* DateFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFactoryMock.swift; sourceTree = "<group>"; };
 		2162BEE724E7FA4500BEE369 /* PollingKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PollingKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2162BEE924E7FA4500BEE369 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2162BEED24E7FA4500BEE369 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +89,7 @@
 		619A5ED99EC2CD54692AC511 /* Pods-PollingController-PollingControllerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingController-PollingControllerTests.debug.xcconfig"; path = "Target Support Files/Pods-PollingController-PollingControllerTests/Pods-PollingController-PollingControllerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		687104E58C1DDC0714385111 /* Pods-PollingKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingKit.release.xcconfig"; path = "Target Support Files/Pods-PollingKit/Pods-PollingKit.release.xcconfig"; sourceTree = "<group>"; };
 		71B190AB05E9F812AAD6C1FE /* Pods-PollingController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingController.debug.xcconfig"; path = "Target Support Files/Pods-PollingController/Pods-PollingController.debug.xcconfig"; sourceTree = "<group>"; };
+		80C16BD027CC13FB00AB6FBC /* TimerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerMock.swift; sourceTree = "<group>"; };
 		851B9F2F69A0E8F4D5874934 /* Pods-PollingKit-PollingKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingKit-PollingKitTests.release.xcconfig"; path = "Target Support Files/Pods-PollingKit-PollingKitTests/Pods-PollingKit-PollingKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		8C85D2DBECD43659D9AA2296 /* Pods_PollingKit_PollingKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PollingKit_PollingKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91187777334BC59C6672FAEF /* Pods-PollingController-PollingControllerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingController-PollingControllerTests.release.xcconfig"; path = "Target Support Files/Pods-PollingController-PollingControllerTests/Pods-PollingController-PollingControllerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -111,10 +127,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11AA438027C96C1E0009A0D3 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				11AA437C27C96B9F0009A0D3 /* PollingControllerDelegateMock.swift */,
+				11AA437E27C96C1A0009A0D3 /* TimerFactoryMock.swift */,
+				11AA438127C96C2A0009A0D3 /* DateFactoryMock.swift */,
+				80C16BD027CC13FB00AB6FBC /* TimerMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		2162BEE224E7F9B200BEE369 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				21892AE624E521A600630677 /* PollingController.swift */,
+				11AA437A27C96ACD0009A0D3 /* PollingState.swift */,
+				11AA437427C96A420009A0D3 /* TimerType.swift */,
+				11AA437627C96A680009A0D3 /* TimerFactory.swift */,
+				11AA437827C96A7A0009A0D3 /* DateFactory.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -169,6 +200,7 @@
 			children = (
 				21892AE524E520C300630677 /* Supporting Files */,
 				21892AD824E5209000630677 /* PollingControllerTests.swift */,
+				11AA438027C96C1E0009A0D3 /* Mocks */,
 			);
 			path = PollingKitTests;
 			sourceTree = "<group>";
@@ -293,7 +325,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1320;
 				ORGANIZATIONNAME = "Lukas Würzburger";
 				TargetAttributes = {
 					2162BEE624E7FA4500BEE369 = {
@@ -435,7 +467,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11AA437727C96A680009A0D3 /* TimerFactory.swift in Sources */,
 				21892AE724E521A600630677 /* PollingController.swift in Sources */,
+				11AA437927C96A7A0009A0D3 /* DateFactory.swift in Sources */,
+				11AA437B27C96ACD0009A0D3 /* PollingState.swift in Sources */,
+				11AA437527C96A420009A0D3 /* TimerType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +479,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11AA438227C96C2A0009A0D3 /* DateFactoryMock.swift in Sources */,
+				11AA437F27C96C1A0009A0D3 /* TimerFactoryMock.swift in Sources */,
+				80C16BD127CC13FB00AB6FBC /* TimerMock.swift in Sources */,
+				11AA437D27C96B9F0009A0D3 /* PollingControllerDelegateMock.swift in Sources */,
 				21892AD924E5209000630677 /* PollingControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -544,6 +584,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -569,7 +610,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -608,6 +649,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -627,7 +669,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

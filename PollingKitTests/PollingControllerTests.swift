@@ -14,7 +14,6 @@ class PollingControllerTests: XCTestCase {
     func testTakesArguments() {
         let polling = PollingController(preferredInterval: 4) { _ in }
         XCTAssertEqual(polling.preferredInterval, 4)
-        XCTAssertNotNil(polling.handler)
     }
 
     func testIsRunningRepresentsBehavior() {
@@ -51,12 +50,10 @@ class PollingControllerTests: XCTestCase {
                 if count == 1 {
                     XCTAssertTrue(polling.isRunning)
                     XCTAssertEqual(polling.state, .runningWithTimer)
-                    XCTAssertNotNil(polling.timer)
                     polling.stop()
                 } else if count == 2 {
                     XCTAssertFalse(polling.isRunning)
                     XCTAssertEqual(polling.state, .idle)
-                    XCTAssertNil(polling.timer)
                 }
                 expectRestartedTimerAfterCallback.fulfill()
             }
@@ -64,7 +61,6 @@ class PollingControllerTests: XCTestCase {
         XCTAssertEqual(polling.state, .idle)
         polling.start()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            XCTAssertNil(polling.timer)
             XCTAssertTrue(polling.isRunning)
             XCTAssertEqual(polling.state, .runningWithoutTimer)
             expectStoppedTimer.fulfill()
@@ -76,10 +72,15 @@ class PollingControllerTests: XCTestCase {
 
     func testCanNotStartPollingWithActiveTimer() {
         let polling = PollingController(preferredInterval: 4) { _ in }
+        let timerFactoryMock = TimerFactoryMock()
+        let timer = Timer.scheduledTimer(withTimeInterval: 0, repeats: false, block: { _ in })
+        timerFactoryMock.timerReturnValue = timer
+        polling.timerFactory = timerFactoryMock
         polling.start()
-        let timer = polling.timer
         polling.start()
-        XCTAssertEqual(timer, polling.timer)
+        XCTAssertEqual(timerFactoryMock.calls, [
+            .timer(interval: 4, repeats: true)
+        ])
     }
 
     func testReactivatesTimerAfterBelatedCallback() {
@@ -89,11 +90,15 @@ class PollingControllerTests: XCTestCase {
             }
         }
         polling.start()
-        let timer = polling.timer
+        let timerFactoryMock = TimerFactoryMock()
+        let timer = Timer.scheduledTimer(withTimeInterval: 0, repeats: false, block: { _ in })
+        timerFactoryMock.timerReturnValue = timer
+        polling.timerFactory = timerFactoryMock
         let expectTimerToInvalidateAndReassign = expectation(description: "timer to invalidate and reassign")
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
-            XCTAssertNotEqual(timer, polling.timer)
-            XCTAssertNotNil(polling.timer)
+            XCTAssertEqual(timerFactoryMock.calls, [
+                .timer(interval: 0.02, repeats: true)
+            ])
             expectTimerToInvalidateAndReassign.fulfill()
         }
         wait(for: [expectTimerToInvalidateAndReassign], timeout: 1)
@@ -105,6 +110,8 @@ class PollingControllerTests: XCTestCase {
         }
         let delegate = PollingControllerDelegateMock()
         polling.delegate = delegate
+        let timerFactoryMock = TimerFactoryMock()
+        polling.timerFactory = timerFactoryMock
         XCTAssertEqual([], delegate.stateChangeHistory)
         polling.start()
         XCTAssertEqual([
@@ -112,6 +119,9 @@ class PollingControllerTests: XCTestCase {
             .runningWithTimer,
             .waitingForTimerTick
         ], delegate.stateChangeHistory)
+        XCTAssertEqual(timerFactoryMock.calls, [
+            .timer(interval: 5, repeats: true)
+        ])
     }
 
     func testCallsDelegateCapturesCorrectStateChangesWithSadPath() {
@@ -139,20 +149,5 @@ class PollingControllerTests: XCTestCase {
             expectCallbackToBeInvoked.fulfill()
         }
         wait(for: [expectCallbackToBeInvoked], timeout: 1)
-    }
-}
-
-// MARK: - Mocked Objects
-
-class PollingControllerDelegateMock: PollingControllerDelegate {
-
-    // MARK: - Variables
-
-    var stateChangeHistory: [PollingController.State] = []
-
-    // MARK: - Polling Controller Delegate
-
-    func pollingController(_ pollingController: PollingController, didChangeState state: PollingController.State) {
-        stateChangeHistory.append(state)
     }
 }
