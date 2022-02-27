@@ -27,6 +27,7 @@
 		21892AD924E5209000630677 /* PollingControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21892AD824E5209000630677 /* PollingControllerTests.swift */; };
 		21892ADB24E5209000630677 /* PollingKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 21892ACD24E5209000630677 /* PollingKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21892AE724E521A600630677 /* PollingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21892AE624E521A600630677 /* PollingController.swift */; };
+		80C16BD127CC13FB00AB6FBC /* TimerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C16BD027CC13FB00AB6FBC /* TimerMock.swift */; };
 		96448E767F34F61841F287E5 /* Pods_PollingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7706E928561859C84566676 /* Pods_PollingKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +89,7 @@
 		619A5ED99EC2CD54692AC511 /* Pods-PollingController-PollingControllerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingController-PollingControllerTests.debug.xcconfig"; path = "Target Support Files/Pods-PollingController-PollingControllerTests/Pods-PollingController-PollingControllerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		687104E58C1DDC0714385111 /* Pods-PollingKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingKit.release.xcconfig"; path = "Target Support Files/Pods-PollingKit/Pods-PollingKit.release.xcconfig"; sourceTree = "<group>"; };
 		71B190AB05E9F812AAD6C1FE /* Pods-PollingController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingController.debug.xcconfig"; path = "Target Support Files/Pods-PollingController/Pods-PollingController.debug.xcconfig"; sourceTree = "<group>"; };
+		80C16BD027CC13FB00AB6FBC /* TimerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerMock.swift; sourceTree = "<group>"; };
 		851B9F2F69A0E8F4D5874934 /* Pods-PollingKit-PollingKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingKit-PollingKitTests.release.xcconfig"; path = "Target Support Files/Pods-PollingKit-PollingKitTests/Pods-PollingKit-PollingKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		8C85D2DBECD43659D9AA2296 /* Pods_PollingKit_PollingKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PollingKit_PollingKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91187777334BC59C6672FAEF /* Pods-PollingController-PollingControllerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingController-PollingControllerTests.release.xcconfig"; path = "Target Support Files/Pods-PollingController-PollingControllerTests/Pods-PollingController-PollingControllerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				11AA437C27C96B9F0009A0D3 /* PollingControllerDelegateMock.swift */,
 				11AA437E27C96C1A0009A0D3 /* TimerFactoryMock.swift */,
 				11AA438127C96C2A0009A0D3 /* DateFactoryMock.swift */,
+				80C16BD027CC13FB00AB6FBC /* TimerMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 			files = (
 				11AA438227C96C2A0009A0D3 /* DateFactoryMock.swift in Sources */,
 				11AA437F27C96C1A0009A0D3 /* TimerFactoryMock.swift in Sources */,
+				80C16BD127CC13FB00AB6FBC /* TimerMock.swift in Sources */,
 				11AA437D27C96B9F0009A0D3 /* PollingControllerDelegateMock.swift in Sources */,
 				21892AD924E5209000630677 /* PollingControllerTests.swift in Sources */,
 			);

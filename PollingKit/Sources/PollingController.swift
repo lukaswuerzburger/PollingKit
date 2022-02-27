@@ -21,9 +21,9 @@ final public class PollingController {
 
     // MARK: - Variables
 
-    internal var timer: TimerType?
-    internal var lastTimerTicked: Date?
-    internal var handler: (@escaping () -> Void) -> Void
+    private var timer: TimerType?
+    private var lastTimerTicked: Date?
+    private var handler: (@escaping () -> Void) -> Void
 
     /// A delegate object to communicate state changes to.
     public weak var delegate: PollingControllerDelegate?
@@ -80,7 +80,9 @@ final public class PollingController {
         state = .idle
     }
 
-    func startTimerIfNecessary() {
+    // MARK: - Private
+
+    private func startTimerIfNecessary() {
         guard timer == nil else { return }
         timer = timerFactory.timer(interval: preferredInterval, repeats: true) { [weak self] _ in
             self?.handleTimerTick()
@@ -88,12 +90,12 @@ final public class PollingController {
         state = .waitingForTimerTick
     }
 
-    func stopTimer() {
+    private func stopTimer() {
         timer?.invalidate()
         timer = nil
     }
 
-    func handleTimerTick() {
+    private func handleTimerTick() {
         lastTimerTicked = Date()
         if state.canFireHandler {
             fireHandler()
@@ -103,20 +105,20 @@ final public class PollingController {
         }
     }
 
-    func updateStateAfterTimerHasStopped() {
+    private func updateStateAfterTimerHasStopped() {
         if state == .runningWithTimer {
             state = .runningWithoutTimer
         }
     }
 
-    func fireHandler() {
+    private func fireHandler() {
         state = .runningWithTimer
         handler { [weak self] in
             self?.handleHandlerDidCallBack()
         }
     }
 
-    func handleHandlerDidCallBack() {
+    private func handleHandlerDidCallBack() {
         switch state {
         case .runningWithTimer:
             state = .waitingForTimerTick

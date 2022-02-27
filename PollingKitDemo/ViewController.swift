@@ -159,7 +159,7 @@ class ViewController: UIViewController {
 
 extension ViewController: PollingControllerDelegate {
 
-    func pollingController(_ pollingController: PollingController, didChangeState state: PollingController.State) {
+    func pollingController(_ pollingController: PollingController, didChangeState state: PollingState) {
         switch state {
         case .idle:
             self.state.lastPoint = 0

@@ -16,8 +16,8 @@ class TimerFactoryMock: TimerFactoryType {
 
     var calls: [Call] = []
 
-    var timerReturnValue: TimerType = Timer()
-    func timer(interval: TimeInterval, repeats: Bool, block: @escaping (Timer) -> Void) -> TimerType {
+    var timerReturnValue: TimerType = TimerMock()
+    func timer(interval: TimeInterval, repeats: Bool, block: @escaping (TimerType) -> Void) -> TimerType {
         calls.append(.timer(interval: interval, repeats: repeats))
         return timerReturnValue
     }

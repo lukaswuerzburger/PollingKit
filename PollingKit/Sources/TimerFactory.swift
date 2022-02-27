@@ -9,14 +9,14 @@
 import Foundation
 
 protocol TimerFactoryType {
-    func timer(interval: TimeInterval, repeats: Bool, block: @escaping (Timer) -> Void) -> TimerType
+    func timer(interval: TimeInterval, repeats: Bool, block: @escaping (TimerType) -> Void) -> TimerType
 }
 
 final class TimerFactory: TimerFactoryType {
 
     // MARK: - TimerFactoryType
 
-    func timer(interval: TimeInterval, repeats: Bool, block: @escaping (Timer) -> Void) -> TimerType {
+    func timer(interval: TimeInterval, repeats: Bool, block: @escaping (TimerType) -> Void) -> TimerType {
         Timer.scheduledTimer(withTimeInterval: interval, repeats: repeats, block: block)
     }
 }

@@ -10,9 +10,15 @@ import Foundation
 
 protocol TimerType {
     // swiftlint:disable:next line_length
-    static func scheduledTimer(withTimeInterval interval: TimeInterval, repeats: Bool, block: @escaping (Timer) -> Void) -> Timer
+    func scheduledTimer(withTimeInterval interval: TimeInterval, repeats: Bool, block: @escaping (TimerType) -> Void) -> TimerType
     func invalidate()
     var fireDate: Date { get }
 }
 
-extension Timer: TimerType {}
+extension Timer: TimerType {
+
+    // swiftlint:disable:next line_length
+    func scheduledTimer(withTimeInterval interval: TimeInterval, repeats: Bool, block: @escaping (TimerType) -> Void) -> TimerType {
+        Self.scheduledTimer(withTimeInterval: interval, repeats: repeats, block: block)
+    }
+}
