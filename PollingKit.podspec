@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
     s.name = "PollingKit"
-    s.version = "1.1.0"
+    s.version = "2.0.0"
     s.summary = "PollingKit provides a polling mechanism that respects callback delays."
     s.author = "Lukas Würzburger"
     s.license = { :type => "MIT" }
     s.homepage = "https://github.com/lukaswuerzburger/PollingKit"
-    s.source = { :git => "https://github.com/lukaswuerzburger/PollingKit.git", :tag => "1.1.0" }
+    s.source = { :git => "https://github.com/lukaswuerzburger/PollingKit.git", :branch => "main" }
     s.source_files = "PollingKit/Sources/*.swift"
     s.ios.deployment_target = "10.0"
     s.ios.frameworks = 'Foundation'
